@@ -2,13 +2,14 @@ const route=require('express').Router()
 const HouseModel=require('../model/HouseModel')
 
 route.get('/',(req,res,next)=>{
-    HouseModel.testConnect().then((msg)=>{
-        res.status(200).json(msg)
-        console.log(msg)
-    }).catch((err)=>{
-        res.status(404).json(err)
-        console.log(err)
-    })
+    // HouseModel.testConnect().then((msg)=>{
+    //     res.status(200).json(msg)
+    //     console.log(msg)
+    // }).catch((err)=>{
+    //     res.status(404).json(err)
+    //     console.log(err)
+    // })
+    res.send('hello word')
 })
 
 route.get('/House',(req,res,next)=>{
